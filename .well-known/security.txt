@@ -1,0 +1,3 @@
+Contact: mailto:hello@crayonsforchange.org
+Preferred-Languages: en
+Canonical: https://crayons4change.org/.well-known/security.txt

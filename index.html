@@ -7,15 +7,17 @@
   <meta name="description" content="Crayons For Change is a youth-led nonprofit founded by high school students in Folsom, California. We deliver school supplies, run free STEM camps, and support students locally and internationally." />
   <meta name="author" content="Crayons For Change" />
   <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' https://www.zeffy.com https://docs.google.com mailto:; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content="Crayons For Change | Folsom, CA" />
-  <meta property="og:description" content="Youth-led nonprofit — school supply drives, free STEM camps, and international outreach, run by high schoolers from Folsom, CA." />
+  <meta property="og:description" content="Youth-led education nonprofit supporting students through supply drives, STEM access, business workshops, and international outreach." />
   <meta property="og:site_name"   content="Crayons For Change" />
 
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Crayons For Change | Folsom, CA" />
-  <meta name="twitter:description" content="High school students from Folsom using art to change the world." />
+  <meta name="twitter:description" content="High school students from Folsom helping under-resourced students access supplies and learning programs." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +36,7 @@
         <a href="get-involved.html">Get Involved</a>
         <a href="contact.html">Contact</a>
       </div>
-      <a href="get-involved.html" class="nav-cta">Donate →</a>
+      <a href="https://www.zeffy.com/en-US/ticketing/c4c-youth-business-workshops-and-fair" class="nav-cta" target="_blank" rel="noopener noreferrer">Register →</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -47,13 +49,13 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <div class="hero-badge">YOUTH-LED &nbsp;·&nbsp; FOLSOM, CA &nbsp;·&nbsp; EST. 2021</div>
       <p class="hero-sub">
-        High school students from Folsom, California —<br>
-        using the power of art to spark real change,<br>
-        one supply at a time.
+        High school students from Folsom, California helping under-resourced students access school supplies, STEM learning, and youth business education.
       </p>
-      <a href="about.html" class="hero-link">Our Story →</a>
+      <div class="hero-actions">
+        <a href="#impact" class="hero-button">Learn More</a>
+        <a href="https://www.zeffy.com/en-US/ticketing/c4c-youth-business-workshops-and-fair" class="hero-button hero-button-secondary" target="_blank" rel="noopener noreferrer">Business Fair</a>
+      </div>
     </div>
 
     <div class="hero-headlines" aria-hidden="true">
@@ -84,24 +86,21 @@
         <div class="stat-num" data-count="2">2</div>
         <div class="stat-label">COUNTRIES REACHED</div>
       </div>
-      <div class="stat-rule" aria-hidden="true"></div>
-      <div class="stat-item">
-        <div class="stat-num">Free</div>
-        <div class="stat-label">STEM SUMMER CAMP</div>
-      </div>
     </div>
   </section>
 
   <!-- MISSION -->
-  <section class="mission-section" aria-label="Our story">
+  <section class="mission-section" id="impact" aria-label="Our impact">
     <div class="mission-inner">
-      <div class="mission-label">
-        <span class="label-tag">OUR STORY</span>
-        <p class="mission-aside">Founded in 7th grade with one belief: no student should fall behind because they can't afford a crayon.</p>
-      </div>
       <div class="mission-body reveal">
-        <p class="mission-lead">What started as a local supply drive has grown into a movement — free STEM camps, international outreach to Ahmedabad, and community partnerships — run entirely by high school students from Folsom, CA.</p>
-        <blockquote class="mission-quote">"We believe art and education are rights, not privileges — and we're proving it."</blockquote>
+        <span class="label-tag">OUR WORK</span>
+        <p class="mission-lead">Crayons for Change is an education nonprofit based in Folsom, California, built around a direct idea: students should not miss out because they lack basic supplies or access to hands-on learning.</p>
+        <p class="mission-copy">We run supply drives, free STEM programming, international outreach, and youth business workshops. Registration revenue from our business fair helps fund crayons, notebooks, and other tools students use in real classrooms.</p>
+        <div class="mission-facts" aria-label="Organization facts">
+          <div class="mission-fact"><strong>Education nonprofit</strong><span>EIN 39-2903384</span></div>
+          <div class="mission-fact"><strong>Folsom-founded</strong><span>Student-led since 7th grade</span></div>
+          <div class="mission-fact"><strong>Direct aid</strong><span>Supplies and learning programs</span></div>
+        </div>
         <a href="about.html" class="text-link">Learn about us →</a>
       </div>
       <div class="mission-img reveal reveal-delay-1">
@@ -114,7 +113,7 @@
   <section class="programs-section" aria-label="Our programs">
     <div class="programs-header reveal">
       <span class="label-tag label-light">PROGRAMS</span>
-      <h2 class="programs-headline">Three ways we open<br>doors to learning.</h2>
+      <h2 class="programs-headline">Four practical ways we help students learn.</h2>
     </div>
     <div class="programs-grid">
       <a href="programs.html#supplies" class="program-card reveal">
@@ -123,14 +122,20 @@
         <p class="card-desc">Crayons, notebooks, backpacks — delivered to partner schools locally and internationally. 696+ supplies and counting.</p>
         <div class="card-cta">Learn more →</div>
       </a>
-      <a href="programs.html#camps" class="program-card reveal reveal-delay-1">
+      <a href="programs.html#business-fair" class="program-card reveal reveal-delay-1">
         <div class="card-num">02</div>
-        <h3 class="card-title">Free STEM Summer Camp</h3>
-        <p class="card-desc">Hands-on coding, circuits, and engineering — completely free. No fees, no barriers. 116+ students have participated.</p>
-        <div class="card-cta">Register for camp →</div>
+        <h3 class="card-title">Youth Business Workshops</h3>
+        <p class="card-desc">$25 registration gives students access to online workshops and a community fair where they plan, price, and present mini businesses.</p>
+        <div class="card-cta">Register via Zeffy →</div>
       </a>
-      <a href="programs.html" class="program-card reveal reveal-delay-2">
+      <a href="programs.html#camps" class="program-card reveal reveal-delay-2">
         <div class="card-num">03</div>
+        <h3 class="card-title">Free STEM Summer Camp</h3>
+        <p class="card-desc">Hands-on coding, circuits, engineering, and science projects. No fees, no materials cost, and 116+ students have participated.</p>
+        <div class="card-cta">Learn about camp →</div>
+      </a>
+      <a href="programs.html#global" class="program-card reveal reveal-delay-3">
+        <div class="card-num">04</div>
         <h3 class="card-title">International Outreach</h3>
         <p class="card-desc">Delivered student-to-student in Ahmedabad, India. Our mission doesn't stop at the city limits.</p>
         <div class="card-cta">2 countries reached →</div>
@@ -143,13 +148,13 @@
     <div class="cta-inner">
       <span class="label-tag">MAKE AN IMPACT</span>
       <h2 class="cta-headline reveal">
-        Every student deserves
-        <em>a chance to create.</em>
+        Help students show up
+        <em>ready to learn.</em>
       </h2>
-      <p class="cta-sub reveal reveal-delay-1">Donate supplies, volunteer your time, or partner with us to reach more students.</p>
+      <p class="cta-sub reveal reveal-delay-1">Donate supplies, volunteer your time, register for the business fair, or partner with us to reach more students.</p>
       <div class="cta-buttons reveal reveal-delay-2">
         <a href="get-involved.html" class="btn-solid">Get Involved</a>
-        <a href="programs.html"     class="btn-ghost">Our Programs</a>
+        <a href="https://www.zeffy.com/en-US/ticketing/c4c-youth-business-workshops-and-fair" class="btn-ghost" target="_blank" rel="noopener noreferrer">Business Fair</a>
       </div>
     </div>
   </section>
@@ -159,7 +164,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">CRAYONS FOR CHANGE</div>
-        <p class="footer-desc">Youth-driven nonprofit supporting students through school supply drives, free STEM camps, and community partnerships — led by high schoolers from Folsom, CA.</p>
+        <p class="footer-desc">Youth-led education nonprofit supporting students through supply drives, STEM learning, business workshops, and community partnerships.</p>
       </div>
       <div class="footer-col">
         <h4>NAVIGATE</h4>
@@ -171,9 +176,7 @@
       <div class="footer-col">
         <h4>CONNECT</h4>
         <a href="mailto:hello@crayonsforchange.org">hello@crayonsforchange.org</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/crayons4change/" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
       </div>
     </div>
     <div class="footer-bar">
