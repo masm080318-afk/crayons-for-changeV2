@@ -104,8 +104,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav-links a.active,
 .nav-links a[aria-current="page"] {
-  color: var(--cream);
-  background: var(--orange-d);
+  color: var(--orange-d);
+  background: rgba(74,46,18,0.12);
 }
 .nav-cta {
   display: inline-flex;
@@ -178,7 +178,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav-mobile a:last-child { border-bottom: none; }
 .nav-mobile a:hover,
-.nav-mobile a.active { color: var(--orange); }
+.nav-mobile a.active { color: var(--orange-d); }
 .nav-mobile .mobile-cta {
   margin-top: 20px;
   display: inline-flex;

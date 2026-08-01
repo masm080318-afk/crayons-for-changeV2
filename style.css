@@ -287,7 +287,7 @@ body { animation: pageFade 0.5s ease both; }
   font-family: 'Playfair Display', serif;
   font-size: clamp(52px, 5vw, 76px);
   font-weight: 700;
-  color: var(--orange);
+  color: var(--orange-d);
   line-height: 1;
   margin-bottom: 10px;
   transition: transform 0.3s var(--ease);
@@ -300,7 +300,7 @@ body { animation: pageFade 0.5s ease both; }
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0;
-  color: var(--muted);
+  color: var(--orange-d);
 }
 
 .stat-rule {
