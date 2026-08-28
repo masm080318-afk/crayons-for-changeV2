@@ -62,12 +62,12 @@
     <!-- 1. HERO — same shape as every other page's .page-hero, no invented device -->
     <div class="page-hero">
       <div class="container">
-        <div class="page-hero-label">Young Entrepreneurs Program</div>
+        <div class="page-hero-label">Young Entrepreneurs Program · Grades 4–9</div>
         <h1>Build your first business in 10 weeks.</h1>
         <p>A live online entrepreneurship program where young students turn an idea into a real business — then learn to price, brand, market, sell, and pitch it before presenting at the C4C Youth Business Fair.</p>
 
         <div class="btn-row">
-          <a class="btn btn-primary" href="YOUNG_ENTREPRENEURS_REGISTRATION_URL" data-yep-href="registrationUrl">Register Now →</a>
+          <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/winter-youth-business-fair" data-yep-href="registrationUrl">Register Now →</a>
           <a class="btn btn-outline" href="#roadmap">See the 10 Weeks ↓</a>
         </div>
 
@@ -76,7 +76,7 @@
           <span class="yep-stat-rule" aria-hidden="true"></span>
           <div class="yep-stat"><strong>1 Hour</strong><span>Each week</span></div>
           <span class="yep-stat-rule" aria-hidden="true"></span>
-          <div class="yep-stat"><strong data-yep-text="earlyBirdPrice">$69</strong><span>Early Bird</span></div>
+          <div class="yep-stat"><strong data-yep-text="earlyBirdPrice">$70</strong><span>Early Bird</span></div>
           <span class="yep-stat-rule" aria-hidden="true"></span>
           <div class="yep-stat"><strong>December</strong><span>Business Fair</span></div>
         </div>
@@ -318,9 +318,9 @@
           <div class="reveal">
             <div class="section-label">Registration</div>
             <h2>Ready to build something?</h2>
-            <p class="lead" style="max-width:100%;">Four ways to register for the same program — pick the one that applies to you.</p>
+            <p class="lead" style="max-width:100%;">Five ways to register for the same program — pick the one that applies to you.</p>
             <div class="btn-row">
-              <a class="btn btn-primary" href="YOUNG_ENTREPRENEURS_REGISTRATION_URL" data-yep-href="registrationUrl">Register Now →</a>
+              <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/winter-youth-business-fair" data-yep-href="registrationUrl">Register Now →</a>
             </div>
             <p style="margin-top:20px; font-size:14px; color:var(--muted);">Need-based scholarships available. Program proceeds support Crayons for Change's educational-access initiatives.</p>
           </div>
@@ -328,18 +328,22 @@
           <div class="donation-tiers reveal reveal-d1">
             <h3>Registration</h3>
             <div class="tier" data-yep-tier="early-bird">
-              <span class="tier-amount" data-yep-text="earlyBirdPrice">$69</span>
+              <span class="tier-amount" data-yep-text="earlyBirdPrice">$70</span>
               <span class="tier-desc">Early Bird</span>
             </div>
             <div class="tier" data-yep-tier="regular">
-              <span class="tier-amount" data-yep-text="regularPrice">$89</span>
+              <span class="tier-amount" data-yep-text="regularPrice">$90</span>
               <span class="tier-desc">Regular</span>
             </div>
             <div class="tier" data-yep-tier="late">
               <span class="tier-amount" data-yep-text="latePrice">$99</span>
               <span class="tier-desc">Late</span>
             </div>
-            <div class="tier" data-yep-tier="pair">
+            <div class="tier" data-yep-tier="early-bird">
+              <span class="tier-amount" data-yep-text="pairEarlyBirdPrice">$119</span>
+              <span class="tier-desc">Sibling / Friend Pair — Early Bird</span>
+            </div>
+            <div class="tier" data-yep-tier="regular">
               <span class="tier-amount" data-yep-text="pairPrice">$149</span>
               <span class="tier-desc">Sibling / Friend Pair</span>
             </div>
@@ -368,7 +372,7 @@
           </div>
           <div class="card reveal reveal-d2">
             <h3 style="font-family:'Inter',sans-serif; font-size:17px;">Awards</h3>
-            <p style="color:var(--muted); font-size:14px; margin-top:8px;">Recognize strong ideas, execution, branding, impact, and presentation.</p>
+            <p style="color:var(--muted); font-size:14px; margin-top:8px;">Recognize strong ideas, execution, branding, impact, and presentation — with prizes for winners.</p>
           </div>
         </div>
 
@@ -411,7 +415,7 @@
           <div class="faq-item reveal">
             <details>
               <summary class="faq-q">Who is the program for?</summary>
-              <p class="faq-a">Designed for young entrepreneurs. An exact grade range will be shared once finalized — reach out if you have a question about a specific age or grade.</p>
+              <p class="faq-a">Students in grades 4–9. Reach out if you have a question about a specific age or grade.</p>
             </details>
           </div>
           <div class="faq-item reveal">
@@ -481,7 +485,7 @@
           <h2>Your first business can start with one idea.</h2>
           <p>We'll help you build the rest.</p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="YOUNG_ENTREPRENEURS_REGISTRATION_URL" data-yep-href="registrationUrl">Register for the Young Entrepreneurs Program →</a>
+            <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/winter-youth-business-fair" data-yep-href="registrationUrl">Register for the Young Entrepreneurs Program →</a>
             <a class="btn btn-ghost" href="INTRO_WORKSHOP_REGISTRATION_URL" data-yep-href="introWorkshopUrl" data-yep-if="introWorkshopEnabled">Try the Free Intro Workshop</a>
           </div>
         </div>
@@ -551,14 +555,15 @@
        registration links. Update the values below — every CTA,
        price, and toggle on this page reads from this object. ── */
     const YEP_PROGRAM = {
-      registrationUrl: 'YOUNG_ENTREPRENEURS_REGISTRATION_URL', // TODO: replace with the live registration link (e.g. Zeffy)
+      registrationUrl: 'https://www.zeffy.com/en-US/ticketing/winter-youth-business-fair',
       introWorkshopUrl: 'INTRO_WORKSHOP_REGISTRATION_URL',      // TODO: replace with the live intro-workshop registration link
       introWorkshopEnabled: true,      // set false once the free intro workshop date has passed, to hide it site-wide
       registrationStatus: 'early-bird', // 'early-bird' | 'regular' | 'late' | 'pair' — highlights the matching tier row
-      earlyBirdPrice: '$69',
-      regularPrice: '$89',
+      earlyBirdPrice: '$70',
+      regularPrice: '$90',
       latePrice: '$99',
-      pairPrice: '$149',
+      pairEarlyBirdPrice: '$119', // sibling/friend pair, early-bird window
+      pairPrice: '$149',          // sibling/friend pair, regular rate
       fairDate: 'Around December 5, 2026',
       programStartDate: null, // TODO: set once C4C finalizes the schedule
     };
