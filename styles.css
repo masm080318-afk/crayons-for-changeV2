@@ -993,214 +993,69 @@ body { animation: pageFadeIn 0.4s ease both; }
 
 /* ══════════════════════════════════════════════════════
    YOUNG ENTREPRENEURS PROGRAM — /young-entrepreneurs/
+   Deliberately small: this page reuses .card, .btn, .grid-*,
+   .clean-list, .donation-tiers/.tier, .callout, .cta-banner,
+   .trust-panel, .event-facts, and .faq-item from the base
+   stylesheet. Only genuinely new layout gets a rule here.
    ══════════════════════════════════════════════════════ */
 
-.yep-hero {
-  background: var(--cream);
-  border-bottom: 1px solid var(--border);
-  padding: 72px 0 64px;
-  overflow: hidden;
+/* Hero fact line — plain text + thin rules, like the homepage stat row */
+.yep-stats-line { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 32px; }
+.yep-stat { display: flex; flex-direction: column; gap: 2px; }
+.yep-stat strong { font-family: 'Playfair Display', Georgia, serif; font-size: 21px; color: var(--dark); }
+.yep-stat span { font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; color: var(--muted2); }
+.yep-stat-rule { width: 1px; height: 28px; background: var(--border); }
+@media (max-width: 600px) {
+  .yep-stat-rule { display: none; }
+  .yep-stats-line { gap: 20px 30px; }
 }
-.yep-hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
-.yep-hero h1 { font-size: clamp(34px, 5vw, 58px); margin: 16px 0 20px; }
-.yep-hero-lead { font-size: 18px; color: var(--muted); line-height: 1.75; max-width: 560px; }
 
-.yep-hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 36px; }
-.yep-meta-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 12px; }
-.yep-meta-item strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 20px; color: var(--dark); }
-.yep-meta-item span { display: block; font-size: 12px; color: var(--muted2); margin-top: 2px; }
-
-/* Vertical progression device (hero visual) */
-.yep-progression {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  box-shadow: var(--shadow-sm);
-}
-.yep-progression-step { display: flex; align-items: center; gap: 16px; }
-.yep-progression-num {
+/* Numbered row list — used for "How It Works" and the 10-week roadmap */
+.yep-numbered-row { display: flex; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.yep-numbered-row:first-child { padding-top: 0; }
+.yep-numbered-row:last-child { border-bottom: none; }
+.yep-numbered-row .yep-num {
   font-family: 'Space Mono', monospace;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--orange-d);
-  background: var(--orange-l);
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  width: 26px;
+  padding-top: 2px;
 }
-.yep-progression-label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; color: var(--dark); }
-.yep-progression-connector { width: 1px; height: 20px; background: var(--border); margin-left: 15px; }
+.yep-numbered-row .yep-row-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 4px; }
+.yep-numbered-row .yep-row-desc { font-size: 14px; color: var(--muted); line-height: 1.65; max-width: 520px; }
+.yep-roadmap .yep-num { font-size: 14px; width: 32px; }
 
-/* Inline chip flow (used inline in copy) */
-.yep-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 6px; margin-top: 28px; }
-.yep-flow-item {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: var(--orange-d);
+/* Two-column plain lists (skills, toolkit) — reuses .clean-list */
+.yep-list-2col { columns: 2; column-gap: 40px; }
+.yep-list-2col li { break-inside: avoid; }
+@media (max-width: 600px) {
+  .yep-list-2col { columns: 1; }
+}
+
+/* Class-format line — one typeset sentence instead of a grid */
+.yep-class-line { font-size: 17px; color: var(--muted); line-height: 2; max-width: 680px; }
+.yep-class-line strong { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--orange-d); font-weight: 700; }
+.yep-class-line .sep { color: var(--muted2); margin: 0 2px; }
+
+/* Registration tiers — highlight the active row within .donation-tiers, no cards/badges */
+.tier-current {
   background: var(--orange-l);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 8px 14px;
+  margin: 0 -14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
 }
-.yep-flow-arrow { color: var(--muted2); font-size: 14px; }
+.tier-current .tier-desc { color: var(--orange-d); font-weight: 700; }
 
-/* Core value 01-04 steps */
-.yep-value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
-.yep-value-step .yep-progression-num { margin-bottom: 14px; }
-.yep-value-step h3 { font-family: 'Inter', sans-serif; font-size: 16px; margin-bottom: 6px; }
-.yep-value-step p { font-size: 14px; color: var(--muted); line-height: 1.65; }
-
-/* Skills */
-.yep-skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.yep-skill {
-  font-size: 14px; font-weight: 600; color: var(--dark);
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 9px 18px;
-}
-
-/* Roadmap timeline */
-.yep-roadmap { position: relative; margin-top: 48px; }
-.yep-roadmap::before { content: ''; position: absolute; left: 27px; top: 4px; bottom: 4px; width: 1px; background: var(--border); }
-.yep-week { position: relative; padding: 0 0 32px 68px; }
-.yep-week:last-child { padding-bottom: 0; }
-.yep-week-num {
-  position: absolute; left: 0; top: 0;
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 1.5px solid var(--orange);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: var(--orange-d);
-}
-.yep-week-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 17px; color: var(--dark); margin-bottom: 6px; }
-.yep-week-desc { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 520px; }
-
-.yep-finish {
-  margin-top: 40px;
-  background: var(--dark);
-  border-radius: 16px;
-  padding: 48px 40px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.yep-finish::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); }
-.yep-finish-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0; text-transform: uppercase; color: var(--orange); }
-.yep-finish h3 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 3vw, 36px); color: var(--cream); margin: 10px 0 12px; }
-.yep-finish p { color: rgba(245,242,233,0.72); max-width: 560px; margin: 0 auto; font-size: 15px; line-height: 1.7; }
-.yep-finish-date {
-  display: inline-block; margin-top: 18px;
-  font-family: 'Space Mono', monospace; font-size: 12px; color: var(--cream);
-  border: 1px solid rgba(255,240,184,0.3);
-  border-radius: 999px;
-  padding: 8px 18px;
-}
-
-/* Class format breakdown */
-.yep-format-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 36px; }
-.yep-format-step { text-align: left; }
-.yep-format-step strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: var(--dark); }
-.yep-format-step span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
-
-/* Toolkit */
-.yep-toolkit { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; margin-top: 28px; }
-.yep-toolkit-item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--ink); }
-.yep-toolkit-item svg { flex-shrink: 0; margin-top: 3px; }
-
-/* Pricing */
-.yep-pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 36px; align-items: stretch; }
-.yep-price-card {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  display: flex; flex-direction: column;
-  transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease), border-color 0.2s;
-}
-.yep-price-card h3 { font-family: 'Inter', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0; color: var(--muted); font-weight: 700; }
-.yep-price-amount { font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: var(--dark); margin: 10px 0 4px; }
-.yep-price-note { font-size: 13px; color: var(--muted2); margin-bottom: 20px; }
-.yep-price-featured { border-color: var(--orange); box-shadow: var(--shadow); transform: translateY(-4px); position: relative; }
-.yep-price-featured::before {
-  content: 'Featured';
-  position: absolute; top: -12px; left: 24px;
-  background: var(--orange); color: var(--dark2);
-  font-family: 'Space Mono', monospace; font-size: 10px; text-transform: uppercase;
-  padding: 4px 10px; border-radius: 999px;
-}
-.yep-price-card .btn { margin-top: auto; }
-.yep-scholarship-note {
-  margin-top: 24px;
-  padding: 16px 20px;
-  background: var(--orange-l);
-  border-left: 3px solid var(--orange);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  font-size: 14px; color: var(--orange-d);
-}
-
-/* FAQ — native <details> disclosure, styled to match .faq-item */
-.yep-faq .faq-item { padding: 0; border-bottom: 1px solid var(--border); }
-.yep-faq .faq-item:first-child { padding-top: 0; }
-.yep-faq .faq-item:last-child { border-bottom: none; }
-.yep-faq summary.faq-q {
-  cursor: pointer;
-  list-style: none;
-  padding: 20px 32px 20px 0;
-  position: relative;
-  margin-bottom: 0;
-}
-.yep-faq summary.faq-q::-webkit-details-marker { display: none; }
-.yep-faq summary.faq-q::after {
-  content: '+';
-  position: absolute; right: 4px; top: 16px;
-  font-size: 22px; line-height: 1; color: var(--orange-d);
-  transition: transform 0.2s var(--ease);
-}
-.yep-faq details[open] summary.faq-q::after { transform: rotate(45deg); }
-.yep-faq .faq-a { padding-bottom: 20px; }
-.yep-faq summary.faq-q:focus-visible { outline: 2px solid var(--orange-d); outline-offset: 4px; }
-
+/* Small muted label, e.g. "Previous Program" on the Programs page */
 .yep-badge {
   display: inline-block;
   font-family: 'Space Mono', monospace;
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0;
   color: var(--muted2);
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 4px 12px;
+  border-radius: var(--radius);
+  padding: 4px 10px;
   margin-bottom: 14px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .yep-hero-meta { grid-template-columns: repeat(2, 1fr); }
-  .yep-value-grid { grid-template-columns: repeat(2, 1fr); }
-  .yep-format-row { grid-template-columns: repeat(3, 1fr); }
-  .yep-pricing-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 900px) {
-  .yep-hero-grid { grid-template-columns: 1fr; }
-  .yep-hero-visual { order: -1; max-width: 420px; margin: 0 auto; width: 100%; }
-}
-@media (max-width: 768px) {
-  .yep-hero { padding: 48px 0; }
-  .yep-hero-meta { grid-template-columns: repeat(2, 1fr); }
-  .yep-value-grid { grid-template-columns: 1fr; }
-  .yep-toolkit { grid-template-columns: 1fr; }
-  .yep-format-row { grid-template-columns: repeat(2, 1fr); }
-  .yep-pricing-grid { grid-template-columns: 1fr; }
-  .yep-price-featured { transform: none; }
-  .yep-finish { padding: 36px 24px; }
-  .yep-week { padding-left: 60px; }
-  .yep-week-num { width: 48px; height: 48px; font-size: 12px; }
-  .yep-roadmap::before { left: 23px; }
-}
-@media (max-width: 480px) {
-  .yep-format-row { grid-template-columns: 1fr; }
 }
