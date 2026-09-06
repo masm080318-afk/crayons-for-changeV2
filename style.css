@@ -5,16 +5,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:    #FFFDF7;
-  --cream-alt:#F7F2E8;
+  --cream:    #F7F9FC;
+  --cream-alt:#EEF2F6;
   --white:    #FFFFFF;
-  --dark:     #2B2520;
-  --dark2:    #1F1C19;
-  --dark3:    #302A25;
-  --orange:   #F2C14E;
-  --orange-d: #5A3517;
-  --muted:    #665E57;
-  --border:   rgba(43, 37, 32, 0.14);
+  --dark:     #1B263B;
+  --dark2:    #101820;
+  --dark3:    #25344D;
+  --orange:   #E56B5D;
+  --orange-d: #B8483D;
+  --muted:    #5D6875;
+  --border:   rgba(27, 38, 59, 0.14);
   --ease:     cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -54,7 +54,7 @@ body { animation: pageFade 0.5s ease both; }
 }
 
 .site-nav.scrolled {
-  background: rgba(255, 253, 247, 0.96);
+  background: rgba(247, 249, 252, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);

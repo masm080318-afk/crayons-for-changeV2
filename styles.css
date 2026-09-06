@@ -2,18 +2,18 @@
 
 /* ── TOKENS ──────────────────────────────────── */
 :root {
-  --cream:     #FFFDF7;
-  --cream-alt: #F7F2E8;
+  --cream:     #F7F9FC;
+  --cream-alt: #EEF2F6;
   --white:     #FFFFFF;
-  --dark:      #2B2520;
-  --dark2:     #1F1C19;
-  --ink:       #332C27;
-  --muted:     #665E57;
-  --muted2:    #81776E;
-  --orange:    #F2C14E;
-  --orange-d:  #5A3517;
-  --orange-l:  #FFF5D6;
-  --border:    #DED6C9;
+  --dark:      #1B263B;
+  --dark2:     #101820;
+  --ink:       #26364D;
+  --muted:     #5D6875;
+  --muted2:    #7D8894;
+  --orange:    #E56B5D;
+  --orange-d:  #B8483D;
+  --orange-l:  #FFF0EE;
+  --border:    #D7DEE7;
   --radius:    8px;
   --radius-lg: 14px;
   --shadow-sm: 0 1px 3px rgba(45,41,38,0.07), 0 1px 2px rgba(45,41,38,0.04);
@@ -51,7 +51,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── NAV ─────────────────────────────────────── */
 .site-nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255,253,247,0.96);
+  background: rgba(247,249,252,0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -100,12 +100,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav-links a:hover {
   color: var(--orange-d);
-  background: rgba(90,53,23,0.10);
+  background: rgba(27,38,59,0.08);
 }
 .nav-links a.active,
 .nav-links a[aria-current="page"] {
   color: var(--orange-d);
-  background: rgba(90,53,23,0.10);
+  background: rgba(27,38,59,0.08);
 }
 .nav-cta {
   display: inline-flex;
@@ -241,19 +241,19 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .dark-ui main {
-  --ink: rgba(255,253,247,0.92);
-  --muted: rgba(255,253,247,0.70);
-  --muted2: rgba(255,253,247,0.52);
+  --ink: rgba(247,249,252,0.94);
+  --muted: rgba(247,249,252,0.72);
+  --muted2: rgba(247,249,252,0.54);
   --dark: var(--cream);
-  --border: rgba(255,253,247,0.16);
-  --orange-l: rgba(242,193,78,0.10);
+  --border: rgba(247,249,252,0.16);
+  --orange-l: rgba(229,107,93,0.10);
   background: var(--dark2);
   color: var(--ink);
 }
 
 .dark-ui .site-nav {
-  background: rgba(31,28,25,0.96);
-  border-bottom-color: rgba(255,253,247,0.12);
+  background: rgba(16,24,32,0.96);
+  border-bottom-color: rgba(247,249,252,0.12);
 }
 
 .dark-ui .site-nav.scrolled {
@@ -265,7 +265,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .dark-ui .nav-links a {
-  color: rgba(255,253,247,0.70);
+  color: rgba(247,249,252,0.72);
 }
 
 .dark-ui .nav-links a:hover,
@@ -945,6 +945,43 @@ body { animation: pageFadeIn 0.4s ease both; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Keep inner pages quiet and easy to scan. */
+body:not(.dark-ui) .page-hero { background: var(--white); }
+body:not(.dark-ui) section { padding: 64px 0; }
+body:not(.dark-ui) .card,
+body:not(.dark-ui) .person-card,
+body:not(.dark-ui) .content-image,
+body:not(.dark-ui) .donation-tiers,
+body:not(.dark-ui) .event-fact,
+body:not(.dark-ui) .contact-info,
+body:not(.dark-ui) .trust-panel { box-shadow: none; border-radius: 8px; }
+.dark-ui main { background: var(--dark2); }
+.dark-ui section { padding: 64px 0; }
+.dark-ui .card,
+.dark-ui .person-card,
+.dark-ui .content-image,
+.dark-ui .donation-tiers,
+.dark-ui .event-fact,
+.dark-ui .contact-info { border-radius: 8px; }
+.page-hero-label, .section-label { letter-spacing: .08em; }
+
+/* A short transition layer masks slow image swaps without delaying fast pages. */
+.page-transition {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-items: center;
+  background: var(--dark2); color: var(--cream);
+  opacity: 1; pointer-events: auto;
+  transition: opacity .22s ease;
+}
+.page-transition.is-gone { opacity: 0; pointer-events: none; }
+.page-transition::after {
+  content: ''; width: 34px; height: 34px;
+  border: 2px solid rgba(247,249,252,.24);
+  border-top-color: var(--orange);
+  border-radius: 50%; animation: pageSpin .7s linear infinite;
+}
+@keyframes pageSpin { to { transform: rotate(360deg); } }
 
 /* ── RESPONSIVE ──────────────────────────────── */
 @media (max-width: 1024px) {
