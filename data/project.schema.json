@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C4C impact project",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "date": { "type": ["string", "null"], "format": "date" },
+    "location": { "type": ["string", "null"] },
+    "country": { "type": ["string", "null"] },
+    "category": { "type": ["string", "null"] },
+    "suppliesDistributed": { "type": ["integer", "null"], "minimum": 0 },
+    "studentsSupported": { "type": ["integer", "null"], "minimum": 0 },
+    "summary": { "type": "string" },
+    "fullDescription": { "type": "array", "items": { "type": "string" } },
+    "coverImage": { "$ref": "#/$defs/image" },
+    "galleryImages": { "type": "array", "items": { "$ref": "#/$defs/image" } },
+    "partnerName": { "type": ["string", "null"] },
+    "documentLinks": { "type": "array", "items": { "$ref": "#/$defs/document" } },
+    "published": { "type": "boolean", "default": false }
+  },
+  "required": ["title", "slug", "published"],
+  "allOf": [{ "if": { "properties": { "published": { "const": true } } }, "then": { "required": ["date", "location", "category", "summary", "coverImage"], "properties": { "date": { "type": "string" }, "location": { "type": "string", "minLength": 1 }, "summary": { "minLength": 1 }, "coverImage": { "type": "object" } } } }],
+  "$defs": {
+    "image": { "type": ["object", "null"], "properties": { "src": { "type": "string" }, "alt": { "type": "string" }, "width": { "type": "integer", "minimum": 1 }, "height": { "type": "integer", "minimum": 1 }, "caption": { "type": ["string", "null"] } }, "required": ["src", "alt", "width", "height"] },
+    "document": { "type": "object", "properties": { "title": { "type": "string" }, "url": { "type": "string" } }, "required": ["title", "url"] }
+  }
+}

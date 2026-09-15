@@ -1,0 +1,12 @@
+{
+  "name": "crayons-for-change",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --test scripts/site.test.mjs && python3 scripts/check_site.py",
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "images": "node scripts/images.cjs"
+  },
+  "engines": { "node": ">=20" }
+}

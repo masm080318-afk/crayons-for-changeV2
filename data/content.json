@@ -1,0 +1,84 @@
+{
+  "organization": {
+    "name": "Crayons for Change",
+    "url": "https://crayons4change.org",
+    "type": "Youth-led 501(c)(3) nonprofit",
+    "mission": "Crayons for Change is a youth-led 501(c)(3) nonprofit dedicated to expanding educational access for underserved students.",
+    "shortMission": "Expanding educational access for underserved students.",
+    "location": "Folsom, California",
+    "email": "hello@crayonsforchange.org",
+    "instagram": "https://www.instagram.com/crayons_for_change/",
+    "donationUrl": "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-17878?source=org-page",
+    "donationExplanation": "Support helps fund educational resources and C4C programs for students.",
+    "story": [],
+    "team": [],
+    "contactMode": "email-draft"
+  },
+  "impact": {
+    "suppliesDistributed": 696,
+    "studentsSupported": 100,
+    "studentsApproximate": true,
+    "locations": [],
+    "programsCompleted": null,
+    "lastUpdated": "2026-09-14",
+    "timeline": [],
+    "projects": [],
+    "reports": [],
+    "financialRecords": []
+  },
+  "photos": {
+    "group": { "file": "supply-group", "alt": "Students holding Crayons for Change school supply bags", "width": 1600, "height": 1068, "caption": null },
+    "distribution": { "file": "supply-distribution", "alt": "Students gathered with donated school supplies at a C4C distribution", "width": 1600, "height": 1068, "caption": null },
+    "community": { "file": "community", "alt": "A C4C participant and a student with a school supply bag", "width": 1600, "height": 1068, "caption": null }
+  },
+  "programs": {
+    "winterYbf": {
+      "title": "Winter Youth Business Fair",
+      "path": "/programs/winter-youth-business-fair/",
+      "status": "current",
+      "tagline": "Build a business. Learn how it works. Present what you create.",
+      "summary": "A 10-week online entrepreneurship program where students build their own businesses while learning idea development, pricing, branding, marketing, finance, sales, and pitching.",
+      "startDate": "2026-09-26",
+      "lastClassDate": "2026-11-28",
+      "fairDate": "2026-12-05",
+      "weekday": "Saturday",
+      "meetingTime": "17:00",
+      "timeZone": "America/Los_Angeles",
+      "meetingTimeConfirmed": true,
+      "registrationUrl": "https://www.zeffy.com/en-US/ticketing/winter-youth-business-fair",
+      "topics": ["Idea development", "Pricing", "Branding", "Marketing", "Finance", "Sales", "Pitching"],
+      "pricing": {
+        "earlyBirdEndsOn": "2026-09-14",
+        "timeZone": "America/Los_Angeles",
+        "verifiedOn": "2026-09-14",
+        "earlyBird": [
+          { "label": "Individual registration", "price": 70, "description": "Classes and competition registration for one student." },
+          { "label": "Pair registration", "price": 119, "description": "Classes and competition registration for two students." }
+        ],
+        "standard": []
+      }
+    },
+    "supplies": { "title": "School Supplies", "path": "/programs/#supplies", "description": "Distributing educational materials to students who need them.", "photo": "distribution" },
+    "entrepreneurship": { "title": "Youth Entrepreneurship", "path": "/programs/winter-youth-business-fair/", "description": "Helping students learn how to build and present their own businesses.", "photo": null },
+    "stem": { "title": "STEM Education", "path": "/programs/#stem", "description": "Hands-on learning in coding, circuits, engineering, and science.", "photo": null, "registrationUrl": null },
+    "pastYbf": {
+      "title": "Youth Business Workshops and Fair",
+      "path": "/programs/past-youth-business-fair/",
+      "status": "past",
+      "summary": "Young people learned to plan a mini business, price products and services, present their ideas, and participate in a community business fair.",
+      "format": "Online workshops followed by an in-person event at Chinmaya Mission Sacramento.",
+      "photo": null,
+      "registrationUrl": null
+    },
+    "other": []
+  },
+  "involvement": { "volunteer": [], "partnerships": [] },
+  "review": {
+    "contentPolicy": "CONTENT NEEDED - DO NOT GENERATE PLACEHOLDER COPY. Empty sections remain unpublished.",
+    "meetingTime": "Owner confirmed 5 PM Pacific on September 14, 2026. Zeffy still lists a 4 PM start; update the event configuration separately.",
+    "locations": "CONTENT NEEDED: project-level confirmation before publishing a Where we work section.",
+    "timeline": "CONTENT NEEDED: verified projects and results organized by date/year.",
+    "stemPhoto": "CONTENT NEEDED: verified STEM program photography. Existing photos depict supply distribution, not STEM camp.",
+    "programBanner": "CONTENT NEEDED: current Winter YBF banner. Use the real C4C logo until supplied."
+  }
+}
