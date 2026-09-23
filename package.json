@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "check": "node --test scripts/site.test.mjs && python3 scripts/check_site.py",
+    "build": "node scripts/check-current-site.mjs",
+    "check": "node scripts/check-current-site.mjs",
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
     "images": "node scripts/images.cjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
