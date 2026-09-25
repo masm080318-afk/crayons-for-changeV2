@@ -1,9 +1,11 @@
 (() => {
   const menu = document.querySelector('.menu-toggle');
   const navigation = document.getElementById('navigation');
+  const programsDropdown = document.querySelector('.programs-dropdown');
   const closeMenu = () => {
     menu.setAttribute('aria-expanded', 'false');
     navigation.classList.remove('is-open');
+    if (programsDropdown) programsDropdown.open = false;
   };
   menu.addEventListener('click', () => {
     const expanded = menu.getAttribute('aria-expanded') === 'true';
@@ -14,6 +16,11 @@
     if (event.target.closest('a')) closeMenu();
   });
   document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && programsDropdown?.open) {
+      programsDropdown.open = false;
+      programsDropdown.querySelector('summary').focus();
+      return;
+    }
     if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
       closeMenu();
       menu.focus();
@@ -21,6 +28,10 @@
   });
   document.addEventListener('click', event => {
     if (!event.target.closest('.site-header')) closeMenu();
+    else if (programsDropdown && !programsDropdown.contains(event.target)) programsDropdown.open = false;
+  });
+  programsDropdown?.addEventListener('focusout', event => {
+    if (!programsDropdown.contains(event.relatedTarget)) programsDropdown.open = false;
   });
   window.matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -43,8 +54,8 @@
     const target = content.links?.[key];
     if (!target) return;
     try {
-      const url = new URL(target);
-      if (url.protocol !== 'https:') return;
+      const url = new URL(target, document.baseURI);
+      if (url.protocol !== 'https:' && url.origin !== location.origin) return;
       link.href = url.href;
       prepareExternalLink(link);
       link.hidden = false;
@@ -127,7 +138,7 @@
         reveal.unobserve(entry.target);
       });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.section-heading, .mission-grid, .mission-facts, .project-card, .featured-event, .event-list article, .founder-card, .story-copy, .team-role').forEach(element => {
+    document.querySelectorAll('.section-heading, .mission-grid, .mission-facts, .project-card, .featured-event, .event-list article, .founder-card, .story-copy, .team-role, .program-preview, .project-detail-body').forEach(element => {
       // Never hide a block already visible when the page opens.
       if (element.getBoundingClientRect().top < window.innerHeight) return;
       element.classList.add('reveal-on-scroll');

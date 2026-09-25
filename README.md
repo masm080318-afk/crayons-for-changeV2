@@ -9,3 +9,4 @@ Edit website-content.js to add approved program URLs and photos. Donation links 
 Run npm run check to verify asset references, section anchors, photos, and domain. npm run build performs the same validation; no generation is needed. The previous generator and data remain as historical source but are no longer invoked by the build command.
 
 The About page lives at about/index.html and includes the founding story and team biographies. Other previous page URLs redirect to matching homepage sections. The repository belongs to masm080318-afk; updates are contributed using abhim65.
+Project pages live in programs/project-liso/, programs/project-hingyap/, and programs/project-pitad/. Their minimal summaries use the September 2026 Teach for the Philippines final impact summaries and confirmation letter supplied in Drive.

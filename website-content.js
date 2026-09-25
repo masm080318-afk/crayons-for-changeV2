@@ -4,7 +4,7 @@ window.C4C_CONTENT = {
   links: {
     donate: "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-17878?source=org-page",
     ahmedabad: "",
-    philippines: "",
+    philippines: "/programs/",
     winterFair: "",
     fiveK: "",
     booths: ""

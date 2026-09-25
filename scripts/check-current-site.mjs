@@ -1,7 +1,7 @@
 import { readFile, access } from 'node:fs/promises';
 import vm from 'node:vm';
 const root = new URL('../', import.meta.url);
-for (const page of ['index.html', 'about/index.html']) {
+for (const page of ['index.html', 'about/index.html', 'programs/index.html', 'programs/project-liso/index.html', 'programs/project-hingyap/index.html', 'programs/project-pitad/index.html']) {
 const html = await readFile(new URL(page, root), 'utf8');
 for (const [, asset] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
   if (/^(https?:|data:|#)/.test(asset)) continue;
