@@ -39,3 +39,8 @@ nav{gap:22px}.site-header .brand-logo{width:205px}.back-to-top span{display:inli
 .event-photo.has-photo{min-height:0;aspect-ratio:945/1162;align-self:center;padding:0;margin:20px;border-radius:8px}.event-photo.has-photo img{position:absolute;width:100%;height:auto;max-width:none;top:-38.12%;left:0;object-fit:initial}
 .impact-sticker strong{font-size:2.8rem}
 @media(max-width:600px){.project-gallery-grid{grid-template-columns:1fr}.project-gallery figure:first-child{grid-column:auto}.project-gallery figure{padding:8px}.event-photo.has-photo{margin:16px}}
+
+/* Compact, consistent project galleries. */
+.project-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}.project-gallery figure,.project-gallery figure:first-child{grid-column:auto;aspect-ratio:auto;padding:10px;overflow:hidden}.project-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.project-gallery-grid.single-photo{grid-template-columns:minmax(0,820px);justify-content:center}.project-gallery-grid.single-photo img{aspect-ratio:16/9}
+@media(max-width:900px){.project-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-gallery-grid figure:first-child{grid-column:1/-1}.project-gallery-grid.single-photo{grid-template-columns:minmax(0,1fr)}.project-gallery-grid.single-photo figure:first-child{grid-column:auto}}
+@media(max-width:600px){.project-gallery-grid{grid-template-columns:1fr}.project-gallery-grid figure:first-child{grid-column:auto}}

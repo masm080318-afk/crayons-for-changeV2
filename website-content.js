@@ -3,7 +3,7 @@
 window.C4C_CONTENT = {
   links: {
     donate: "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-17878?source=org-page",
-    ahmedabad: "",
+    ahmedabad: "/programs/ahmedabad/",
     philippines: "/programs/",
     winterFair: "",
     fiveK: "",
@@ -14,7 +14,7 @@ window.C4C_CONTENT = {
     ahmedabad: { src: "/images/ahmedabad-school-supply-distribution.webp", alt: "A group of boys holding school supply bags during the Ahmedabad project." },
     philippines: { src: "/images/project-pitad-02.jpg", alt: "Students holding their learning kits during Project PITAD in the Philippines." },
     winterFair: { src: "/images/youth-business-workshop.jpg", alt: "Young people attending a Crayons for Change classroom workshop." },
-    avyukth: { src: "", alt: "Portrait of Avyukth Salver, co-founder of Crayons for Change." },
+    avyukth: { src: "/images/avyukth-salver-headshot.png", alt: "Portrait of Avyukth Salver, president and co-founder of Crayons for Change." },
     mohammed: { src: "", alt: "Portrait of Mohammed Mansuri, co-founder of Crayons for Change." },
     marketing: { src: "", alt: "" }
   }
