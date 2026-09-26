@@ -32,3 +32,10 @@ nav{gap:22px}.site-header .brand-logo{width:205px}.back-to-top span{display:inli
 @media(max-width:800px){.programs-menu{position:static;box-shadow:none;margin:6px 0 0;animation:none}.programs-dropdown summary{padding:7px 0}.program-previews{grid-template-columns:1fr}.program-preview h3{margin-top:18px}.project-detail-body{grid-template-columns:1fr;gap:30px}.project-detail-hero{padding:35px 5% 45px}.project-fact-row{gap:25px;flex-wrap:wrap}.project-other-links{padding-left:5%;padding-right:5%;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.programs-menu{animation:none}}
 .project-other-links{position:static;box-shadow:none;border:0;align-items:center}
+
+/* Photographs retain each project's original color palette. */
+.programs-menu::before{content:'';position:absolute;left:0;right:0;top:-12px;height:12px}
+.project-gallery h2{margin:14px 0 30px}.project-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project-gallery figure{margin:0;padding:12px;background:#fffef9;border-radius:12px}.project-gallery figure:first-child{grid-column:1/-1}.project-gallery img{display:block;width:100%;height:auto;border-radius:6px}.project-gallery figure:not(:first-child){align-self:start}
+.event-photo.has-photo{min-height:0;aspect-ratio:945/1162;align-self:center;padding:0;margin:20px;border-radius:8px}.event-photo.has-photo img{position:absolute;width:100%;height:auto;max-width:none;top:-38.12%;left:0;object-fit:initial}
+.impact-sticker strong{font-size:2.8rem}
+@media(max-width:600px){.project-gallery-grid{grid-template-columns:1fr}.project-gallery figure:first-child{grid-column:auto}.project-gallery figure{padding:8px}.event-photo.has-photo{margin:16px}}

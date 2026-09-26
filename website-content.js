@@ -12,8 +12,8 @@ window.C4C_CONTENT = {
   photos: {
     hero: { src: "/images/students-with-school-supplies.webp", alt: "Students posing together with colorful school supply bags at a Crayons for Change distribution." },
     ahmedabad: { src: "/images/ahmedabad-school-supply-distribution.webp", alt: "A group of boys holding school supply bags during the Ahmedabad project." },
-    philippines: { src: "", alt: "" },
-    winterFair: { src: "", alt: "" },
+    philippines: { src: "/images/project-pitad-02.jpg", alt: "Students holding their learning kits during Project PITAD in the Philippines." },
+    winterFair: { src: "/images/youth-business-workshop.jpg", alt: "Young people attending a Crayons for Change classroom workshop." },
     avyukth: { src: "", alt: "Portrait of Avyukth Salver, co-founder of Crayons for Change." },
     mohammed: { src: "", alt: "Portrait of Mohammed Mansuri, co-founder of Crayons for Change." },
     marketing: { src: "", alt: "" }

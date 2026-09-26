@@ -2,7 +2,19 @@
   const menu = document.querySelector('.menu-toggle');
   const navigation = document.getElementById('navigation');
   const programsDropdown = document.querySelector('.programs-dropdown');
+  const hoverNavigation = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 801px)');
+  let dropdownCloseTimer;
+  programsDropdown?.addEventListener('pointerenter', () => {
+    clearTimeout(dropdownCloseTimer);
+    if (hoverNavigation.matches) programsDropdown.open = true;
+  });
+  programsDropdown?.addEventListener('pointerleave', () => {
+    if (hoverNavigation.matches) dropdownCloseTimer = setTimeout(() => {
+      if (!programsDropdown.contains(document.activeElement)) programsDropdown.open = false;
+    }, 180);
+  });
   const closeMenu = () => {
+    clearTimeout(dropdownCloseTimer);
     menu.setAttribute('aria-expanded', 'false');
     navigation.classList.remove('is-open');
     if (programsDropdown) programsDropdown.open = false;
